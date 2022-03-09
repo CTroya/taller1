@@ -58,7 +58,7 @@ int main() {
         moves++;
         //std::cout << "\n" << (int)moves << '|' << (int)posicI << '|' << (int)posicJ;
         //printRoom(room, posicI, posicJ);
-    }while (moves <= 25000 && !isRoomFull(room));
+    }while (moves < 25000 && !isRoomFull(room));
     printRoom(room, posicI, posicJ);
     std::cout << (int)moves;
     return 0;
