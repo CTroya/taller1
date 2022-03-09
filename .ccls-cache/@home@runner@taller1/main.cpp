@@ -2,7 +2,9 @@
 #include <iostream>
 
 class bichoCuarto {
+
 public:
+  int moves[8][2]= {{-2,1},{-1,2},{1,2},{2,1},{2,-1},{1,-2},{-1,-2},{-2,-1} };
   int M = 1;
   int N = 1;
   int **room;
@@ -51,6 +53,7 @@ public:
 
 int main() {
   bichoCuarto room;
+  int k;
   do {
     std::cout << "Inserte el numero de filas: ";
     std::cin >> room.M;
@@ -76,8 +79,8 @@ int main() {
   do {
     // printRoom(room, posicI, posicJ);
     do {
-      candidateI = posicI + rand() % 3 - 1;
-      candidateJ = posicJ + rand() % 3 - 1;
+      candidateI = posicI + moves[];
+      candidateJ = posicJ;
     } while (candidateI > room.M - 1 || candidateJ > room.N - 1 ||
              candidateI < 0 || candidateJ < 0);
     posicI = candidateI;
