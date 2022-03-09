@@ -51,7 +51,7 @@ int main() {
         do {
             candidateI = posicI + rand()%3 -1;
             candidateJ = posicJ + rand()%3 -1;
-        } while (candidateI > M -1|| candidateJ > N-1);
+        } while (candidateI > M -1|| candidateJ > N-1 || candidateI < 0 ||                  candidateJ < 0);
         posicI = candidateI;
         posicJ = candidateJ;
         room[posicI][posicJ]++;
@@ -60,6 +60,6 @@ int main() {
         //printRoom(room, posicI, posicJ);
     }while (moves < 25000 && !isRoomFull(room));
     printRoom(room, posicI, posicJ);
-    std::cout << (int)moves;
+    std::cout << "El CR7 recorrio el cuarto en " << (int)moves << " pasos \n SIUUUUUUUUUUUU";
     return 0;
 }
